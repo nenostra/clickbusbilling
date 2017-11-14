@@ -1,0 +1,57 @@
+.SelectRow {
+	display: inline-block;
+	width: 100%;
+}
+
+.SelectRow-column {
+	float: left;
+	display: inline-block;
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.SelectRow-radio {
+	display: inline-block;
+	position: relative;
+	width: 50%;
+}
+
+.SelectRow-radio-text {
+	position: relative;
+	display: inline-block;
+	color: #4c4c9d;
+	font-size: 24px;
+	font-weight: 500;
+	top: -6px;
+	left: 10px;
+}
+
+.Selectrow-radio-style {
+	appearance: none;
+	display: inline-block;
+	width: 23px;
+	border-radius: 100%;
+	border: 2px solid #04a7de;
+	height: 23px;
+}
+
+.Selectrow-radio-style:checked {
+	background-repeat: no-repeat;
+	background-color: white;
+	border: 2px solid #04a7de;
+	background-image: url('./blue-circle.png');
+	background-position: center;
+	color: #99a1a7;
+}
+
+.SelectRow-select {
+	font-size: 20px;
+	font-weight: 500;
+	display: inline-block;
+	background-color: #4c4c9d;
+	border: 8px solid #4c4c9d;
+	color: white;
+	float: right;
+	width: 340px;
+	height: 46px;
+}

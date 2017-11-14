@@ -1,0 +1,26 @@
+.YellowButtons-buttons {
+	margin: 20px 27% 0 27%;
+}
+
+.YellowButtons-submit {
+	background-color: #ffcc3d;
+	width: 220px;
+	height: 35px;
+	border: none;
+	border-radius: 8px;
+	margin-bottom: 30px;
+}
+
+.YellowButtons-submit-text {
+	color: #4c4c9d;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.YellowButtons-submit-left {
+	float: left;
+}
+
+.YellowButtons-submit-right {
+	float: right;
+}

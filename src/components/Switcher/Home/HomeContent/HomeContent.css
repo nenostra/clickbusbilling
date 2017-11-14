@@ -1,0 +1,32 @@
+.HomeContent-welcome {
+	display: inline-block;
+  color: #4c4c9d;
+  font-size: 23px;
+  font-weight: 500;
+	width: 100%;
+  text-align: center;
+  padding: 25px 0 15px 0;
+}
+
+.HomeContent-process {
+  font-size: 19.5px;
+}
+
+.HomeContent-list-number {
+  color: #4c4c9d;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.HomeContent-list-instructions {
+  color: #2b2c2d;
+  font-size: 17px;
+  line-height: 1.2;
+  position: relative;
+  font-weight: normal;
+}
+
+.HomeContent-top-adjusted-text {
+  position: absolute;
+  bottom: 5px;
+}

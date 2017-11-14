@@ -1,0 +1,29 @@
+.BillingData-title {
+	display: inline-block;
+	width: 100%;
+	color: #4c4c9d;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 30px 0 30px 0;
+}
+
+.BillingData-rfc {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	font-weight: 500;
+	font-size: 18px;
+	float: left;
+	margin: 18px 0 18px 22px;
+}
+
+.BillingData-rfc-value {
+	position: relative;
+	left: 49%;
+	font-weight: normal;
+}
+
+.BillingData-form-position {
+	margin: 0 7% 0 7%;
+}

@@ -1,0 +1,34 @@
+.FeeBilling {
+  color: #4c4c9d;
+}
+
+.FeeBilling-title {
+  height: 64px;
+  position: relative;
+}
+
+.FeeBilling-title-text {
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  top: 19px;
+  left: 84px;
+}
+
+.FeeBilling-list {
+}
+
+.FeeBilling-list-title {
+  font-size: 18px;
+}
+
+.FeeBilling-list-dot {
+  font-size: 30px;
+  margin-left: -10px;
+}
+
+.FeeBilling-list-element-content {
+  color: #2b2c2d;
+  font-size: 16px;
+  margin: 10px 0;
+}

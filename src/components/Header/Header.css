@@ -1,0 +1,49 @@
+.Header {
+	height: 90px;
+}
+
+.Header-yellow-row {
+  height: 4px;
+  background-color: #ffcc3d;
+}
+
+.Header-clickbus-logo {
+  height: 40px;
+  width: 130px;
+  padding: 20px;
+  float: left;
+}
+
+.Header-contact-info {
+  box-sizing: border-box;
+  height: 100%;
+  width: 320px;
+  float: right;
+  padding: 12px 0 25px 15px;
+  text-align: right;
+	margin-right: 5%;
+}
+
+.Header-headphones {
+  float: left;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.Header-info-column {
+  float: left;
+  padding: 3px 0 2px 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.Header-yellow-arrow {
+  padding: 1px 8px 1px 8px;
+}
+
+.Header-bold-info {
+  margin-top: -3px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: bold;
+}

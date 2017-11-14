@@ -1,0 +1,42 @@
+.CustomField {
+	width: 100%;
+}
+
+.CustomField-label {
+	display: inline-block;
+	width: 52%;
+	font-weight: 500;
+	font-size: 18px;
+	float: left;
+	margin: 18px 0 18px 22px;
+}
+
+.CustomField-input-text {
+	display: inline-block;
+	width: 45%;
+	border-radius: 8px;
+	border: 2px solid #04a7de;
+	height: 25px;
+	margin: 13px 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+.CustomField-checkbox-style {
+	appearance: none;
+	display: inline-block;
+	width: 25px;
+	border-radius: 8px;
+	border: 2px solid #04a7de;
+	height: 25px;
+	margin: 13px 0;
+}
+
+.CustomField-checkbox-style:checked {
+	background-image: url("check-mark.png");
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-color: #04a7de;
+	border: 2px solid #04a7de;
+	color: #99a1a7;
+}

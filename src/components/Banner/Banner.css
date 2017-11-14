@@ -1,0 +1,10 @@
+.Banner {
+	width: 100%;
+  height: auto;
+}
+
+.Banner-image {
+	width: 100%;
+	height: auto;
+  float: left;
+}

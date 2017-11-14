@@ -1,0 +1,18 @@
+.Home-margin {
+  margin: 0 10%;
+}
+
+.Home-fee-billing-position {
+	width: 41%;
+	float: left;
+	margin-right: 7%;
+}
+
+.Home-ticket-billing-position {
+	width: 52%;
+	float: right;
+}
+
+.Home-rfc-form-position {
+	clear: both;
+}
