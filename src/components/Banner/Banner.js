@@ -3,10 +3,16 @@ import banner from './facturacion-banner-opt-min.jpg';
 import './Banner.css';
 
 
-const Banner = () => (
-  <div className="Banner">
-    <img className="Banner-image" src={banner} alt="FACTURACIÓN" />
-  </div>
-);
+function Banner() {
+  return (
+    <div className="Banner">
+      <img
+        className="Banner-image"
+        src={banner}
+        alt="FACTURACIÓN"
+      />
+    </div>
+  )
+}
 
 export default Banner;

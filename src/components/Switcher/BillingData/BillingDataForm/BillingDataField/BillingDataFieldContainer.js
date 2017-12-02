@@ -4,43 +4,53 @@ import CustomField from '../../../../CustomField/CustomField';
 const billingData = [
   {
     name: 'name',
-    content: 'Nombre, Denominación o Razón Social'
+    content: 'Nombre, Denominación o Razón Social',
+    required: true
   },
   {
     name: 'street',
-    content: 'Calle'
+    content: 'Calle',
+    required: false
   },
   {
-    name: 'exterior_num',
-    content: 'Número exterior'
+    name: 'exterior_number',
+    content: 'Número exterior',
+    required: false
   },
   {
-    name: 'interior_num', // TODO: NOT REQUIRED!!!
-    content: 'Número interior'
+    name: 'interior_number',
+    content: 'Número interior',
+    required: false
   },
   {
     name: 'colony',
-    content: 'Colonia'
+    content: 'Colonia',
+    required: false
   },
   {
     name: 'city',
-    content: 'Municipio o Delegación'
+    content: 'Municipio o Delegación',
+    required: false
   },
   {
-    name: 'place',
-    content: 'Localidad'
+    name: 'location',
+    content: 'Localidad',
+    required: false
   },
   {
     name: 'state',
-    content: 'Entidad Federativa'
+    content: 'Entidad Federativa',
+    required: false
   },
   {
     name: 'zipcode',
-    content: 'Código Postal'
+    content: 'Código Postal',
+    required: false
   },
   {
     name: 'payment_method',
-    content: 'Método de pago'
+    content: 'Método de pago',
+    required: true
   }
 ];
 

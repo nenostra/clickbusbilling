@@ -10,7 +10,9 @@ const mapState = ({ rfc }) => ({ initialValues: rfc });
 const dispatchState = dispatch => ({ onBackClick: () => dispatch({type: 'HOME'})});
 
 let BillingDataForm = ({ handleSubmit, onBackClick }) => (
-  <form className="BillingDataForm" onSubmit={ handleSubmit((values, dispatch) => dispatch({ type: 'SEND_BILLING' /*TODO: SEND BILLING DATA TO RFC REDUCER AND STORE IT*/}))}>
+  <form className="BillingDataForm" onSubmit={ handleSubmit((values, dispatch) =>
+    dispatch({ type: 'REPLACE_INTO_BILLING_DATA', payload: values })
+  )}>
     <BillingDataFieldContainer />
     <YellowButtons onBackClick={onBackClick} content='Guardar y Continuar'/>
   </form>

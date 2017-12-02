@@ -8,9 +8,16 @@ import yellowArrow from './yellow-arrow.png';
 const Header = () => (
   <div className="Header">
     <div className="Header-yellow-row"></div>
-    <img className="Header-clickbus-logo" src={logo} alt="logo-clickbus"/>
+    <img
+      className="Header-clickbus-logo"
+      src={logo}
+      alt="logo-clickbus"
+    />
     <div className="Header-contact-info">
-      <img className="Header-headphones" src={headphones} alt="audífonos"/>
+      <img
+        className="Header-headphones"
+        src={headphones}
+        alt="audífonos"/>
       <div className="Header-info-column">
         Int. de la República<br/>
         Ciudad de México
