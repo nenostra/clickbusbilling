@@ -1,0 +1,22 @@
+.OrderItem {
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	display: inline-block;
+}
+
+.OrderItem-row {
+
+}
+
+.OrderItem-titles {
+	float: left;
+	width: 105px;
+	color: #4c4c9d;
+	font-weight: 500;
+	padding: 6px 0;
+}
+
+.OrderItem-data {
+	padding: 6px 0;
+}

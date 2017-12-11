@@ -1,13 +1,14 @@
 import React from 'react'
+import { Field } from 'redux-form';
 import CustomField from '../../../../CustomField/CustomField';
 
 const billingData = [
   {
     name: 'name',
     content: 'Nombre, Denominación o Razón Social',
-    required: true
+    required: false
   },
-  {
+  /*{
     name: 'street',
     content: 'Calle',
     required: false
@@ -41,28 +42,54 @@ const billingData = [
     name: 'state',
     content: 'Entidad Federativa',
     required: false
-  },
+  },*/
   {
     name: 'zipcode',
     content: 'Código Postal',
-    required: false
-  },
-  {
-    name: 'payment_method',
-    content: 'Método de pago',
     required: true
   }
 ];
 
 const BillingDataFieldContainer = () => (
   <div>
-    {billingData.map(({ name, content }, index) => {
+    {billingData.map(({ name, content, required }, index) => {
       const style = {backgroundColor: index % 2 !== 0 ? 'white': '#f9f9f9'};
-      return <CustomField key={index} name={name} content={content} style={style}/>
+      return <CustomField
+               key={index}
+               name={name}
+               content={content}
+               style={style}
+               validate={required}
+             />
       })
     }
-    <CustomField name="verify" content="He verificado que mis datos y confirmo que son correctos:" type="checkbox"
-      className="CustomField-checkbox-style" style={{backgroundColor: '#f9f9f9'}}/>
+    <div style={{ backgroundColor: "#f9f9f9"}}>
+      <label
+        className="CustomField-label"
+        htmlFor="payment_method"
+      >
+        Forma de Pago
+      </label>
+      <Field
+        name="payment_method"
+        component="select"
+        className="CustomField-input-text"
+        style={{ backgroundColor: "white"}}
+      >
+        <option value="04">Tarjeta de Crédito</option>
+        <option value="28">Tarjeta de Débito</option>
+        <option value="01">Efectivo (Pago en Tienda)</option>
+        <option value="03">Transferencia Bancaria (Pago en Ventanilla o SPEI)</option>
+      </Field>
+    </div>
+    <CustomField
+      name="verify"
+      content="He verificado que mis datos y confirmo que son correctos:"
+      type="checkbox"
+      className="CustomField-checkbox-style"
+      style={{backgroundColor: 'white'}}
+      validate={true}
+    />
   </div>
 );
 

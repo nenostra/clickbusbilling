@@ -5,10 +5,9 @@ import './CustomField.css';
 
 export const required = value => (value ? undefined : 'Requerido');
 
-function CustomField({ content, style, key, name, validate, className = "CustomField-input-text", type = "text" }) {
+function CustomField({ content, style, name, validate, className = "CustomField-input-text", type = "text" }) {
   return (
     <Field
-      key={key}
       labelClassName="CustomField-label"
       formClassName={className}
       name={name}

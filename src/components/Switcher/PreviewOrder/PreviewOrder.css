@@ -1,0 +1,13 @@
+.PreviewOrder {
+	margin: 0 7%;
+}
+
+.PreviewOrder-title {
+	display: inline-block;
+	width: 100%;
+	color: #4c4c9d;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 500;
+	margin: 30px 0 30px 0;
+}

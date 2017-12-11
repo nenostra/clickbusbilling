@@ -16,7 +16,7 @@ const dispatchState = dispatch => ({ onBackClick: () => dispatch({type: 'BILLING
 let SendBilling = ({ onBackClick, handleSubmit }) => (
   <form className="SendBilling" onSubmit={ handleSubmit((values, dispatch) => {
     console.log(values)
-    dispatch({ type: 'REVIEW_OR_RESEND', payload: values })
+    dispatch({ type: 'FETCH_ORDER_ITEMS', payload: values })
   }
   
   )}>

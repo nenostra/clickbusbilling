@@ -4,7 +4,7 @@ import './SelectRow.css';
 
 const SelectRow = () => (
   <div className="SelectRow">
-    <div className="SelectRow-column">
+    {/*<div className="SelectRow-column">
       <label className="SelectRow-radio">
         <Field name="emit" component="input" type="radio" value="emit" className="Selectrow-radio-style"/>
         <span className="SelectRow-radio-text">Emitir Factura</span>
@@ -13,9 +13,9 @@ const SelectRow = () => (
         <Field name="emit" component="input" type="radio" value="resend" className="Selectrow-radio-style"/>
         <span className="SelectRow-radio-text">Reenvío de Factura</span>
       </label>
-    </div>
+    </div>*/}
     <div className="SelectRow-column">
-      <Field name="busline" component="select" className="SelectRow-select">
+      <Field name="busline" component="select" className="SelectRow-select" style={{ float: 'left'}}>
         <option value="booking_engine_ado">Grupo ADO</option>
         <option value="booking_engine_tufesa">Tufesa</option>
         <option value="booking_engine_vencedor">Grupo Vencedor</option>

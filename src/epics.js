@@ -43,19 +43,19 @@ const postRfcEpic = action$ =>
       })
     );
 
-const reviewOrResendEpic = action$ =>
-  action$.ofType('REVIEW_OR_RESEND')
+const previewOrResendEpic = action$ =>
+  action$.ofType('FETCH_ORDER_ITEMS')
     .mergeMap(({ payload }) => {
       const { emit, busline, ticket_number, email } = payload;
       return ajax.getJSON(`${endpoint}${emit}/${busline}/${ticket_number}/${email}/`,
         { token })
-        .map( values => ({ type: 'RFC_SUCCESS', payload: values }))
-        //.concat(Observable.of({ type: 'SEND_BILLING'}))
+        .map( values => ({ type: 'FETCH_ORDER_ITEMS_SUCCESS', payload: values }))
+        .concat(Observable.of({ type: 'PREVIEW_ORDER'}))
         .catch(error => {
           const url = "";
-          console.log(error)
+          console.log(error);
           return Observable.of({
-            type: 'RFC_FAILED',
+            type: 'FETCH_ORDER_ITEMS_FAILURE',
             payload: {id: url} ///TODO: FIX THIS WITH A REAL RESPONSE!!!
           })
         })
@@ -67,5 +67,5 @@ const reviewOrResendEpic = action$ =>
 export const rootEpic = combineEpics(
   fetchRfcEpic,
   postRfcEpic,
-  reviewOrResendEpic
+  previewOrResendEpic
 );

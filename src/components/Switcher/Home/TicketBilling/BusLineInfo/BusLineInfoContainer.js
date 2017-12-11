@@ -38,7 +38,14 @@ const BusLineInfoContainer = () =>  (
   <div>
     {busLines.map((busline, index) => {
       const style = {backgroundColor: index % 2 === 0 ? 'white': '#f9f9f9'};
-      return <BusLineInfo key={busline.id} name={busline.name} phone={busline.phone} url={busline.url} style={style}/>;
+      const { id, name, phone, url } = busline;
+      return <BusLineInfo
+               key={id}
+               name={name}
+               phone={phone}
+               url={url}
+               style={style}
+             />;
     })}
   </div>
 );
