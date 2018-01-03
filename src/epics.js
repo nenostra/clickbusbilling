@@ -17,13 +17,11 @@ const fetchRfcEpic = action$ =>
     .mergeMap(({ payload }) => ajax.getJSON(`${endpoint}${payload}`, { token })
       .map( values => ({ type: 'RFC_SUCCESS', payload: values }))
       .concat(Observable.of({ type: 'BILLING_DATA'}))
-      .catch(error => {
-        const url = error.request.url.split('/');
-        return Observable.of({
-          type: 'RFC_FAILED',
-          payload: {rfc: url[url.length - 1]}
+      .catch(error => Observable.of({
+        type: 'RFC_FAILED',
+        payload: {rfc: payload}
         })
-      })
+      )
       .concat(Observable.of({ type: 'BILLING_DATA'}))
     );
 
@@ -32,14 +30,6 @@ const postRfcEpic = action$ =>
     .mergeMap(({ payload }) => ajax.post(`${endpoint}`, payload, { token, 'Content-Type': 'application/json' })
       .map( values => ({ type: 'RFC_SUCCESS', payload: values.response }))
       .concat(Observable.of({ type: 'SEND_BILLING'}))
-      .catch(error => {
-        const url = "";
-        console.log(error);
-        return Observable.of({
-          type: 'RFC_FAILED',
-          payload: {id: url} ///TODO: FIX THIS WITH A REAL RESPONSE!!!
-        })
-      })
     );
 
 const previewOrResendEpic = action$ =>
@@ -51,12 +41,13 @@ const previewOrResendEpic = action$ =>
         .map( values => ({ type: 'FETCH_ORDER_ITEMS_SUCCESS', payload: values }))
         .concat(Observable.of({ type: 'PREVIEW_ORDER'}))
         .catch(error => {
-          const url = "";
           console.log(error);
-          return Observable.of({
-            type: 'FETCH_ORDER_ITEMS_FAILURE',
-            payload: {id: url} ///TODO: FIX THIS WITH A REAL RESPONSE!!!
-          })
+          if (error.status === 404) {
+            alert("No existe una orden relacionada a ese número de operación");
+            return Observable.of({
+              type: 'FETCH_ORDER_ITEMS_FAILURE'
+            })
+          }
         })
       }
     );
